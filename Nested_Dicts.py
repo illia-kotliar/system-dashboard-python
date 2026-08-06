@@ -6,15 +6,15 @@ from GPU_NVIDIA_checker_FUNCTION import nvidiasmicheck
 
 def RAMtempcheck():
     current_sensors = psutil.sensors_temperatures()
-    sensors_list = ["jc42", "spd5118"] # You can past it your RAM temperature sensor name
+    sensors_list = [
+        "jc42",
+        "spd5118",
+    ]  # You can past it your RAM temperature sensor name
 
     for sensor in sensors_list:
         if sensor in current_sensors:
             return sensor
     return None
-
-
-
 
 
 def systemstats():
@@ -27,7 +27,10 @@ def systemstats():
 
     if RAMtempsensor:
         ram_temp_sensor = psutil.sensors_temperatures()[RAMtempsensor]
-        ram_temp_line = {"1": ram_temp_sensor[0].current, "2": ram_temp_sensor[1].current}
+        ram_temp_line = {
+            "1": ram_temp_sensor[0].current,
+            "2": ram_temp_sensor[1].current,
+        }
     else:
         ram_temp_line = {"1": "N/A", "2": "N/A"}
 
@@ -45,7 +48,7 @@ def systemstats():
             "percent": memory.percent,
             "used": round(memory.used / (1024**3), 1),
             "total": round(memory.total / (1024**3), 1),
-            "temp": ram_temp_line
+            "temp": ram_temp_line,
         },
         "gpu": {
             "name": gpu_name,

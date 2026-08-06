@@ -10,14 +10,12 @@ def interfaceload(dict):
     # NVIDIA GPU info
     is_nvidia = nvidiasmicheck()
 
-
-
     # Memory info
     RAM_temp_line = None
-    if dict['memory']['temp']['1'] != "N/A":
-        RAM_temp_line = f"Memory temperature: [bold cyan]{dict['memory']['temp']['1']}°C"
-
-
+    if dict["memory"]["temp"]["1"] != "N/A":
+        RAM_temp_line = (
+            f"Memory temperature: [bold cyan]{dict['memory']['temp']['1']}°C"
+        )
 
     # If NVIDIA and Intel GPUs are found
     if (
@@ -29,7 +27,7 @@ def interfaceload(dict):
             f"CPU Usage: [bold cyan]{dict['cpu']['percent']}[/]%",
             f"CPU Temperature: [bold cyan]{dict['cpu']['temp']}[/]°C",
             "",
-            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)"
+            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
         if RAM_temp_line:
             text.append(RAM_temp_line)
@@ -48,16 +46,13 @@ def interfaceload(dict):
 
         return Group(*text)
 
-
-
-
     # If only Intel IGPU
     elif is_intel and is_intel.startswith("is_intel"):
         text = [
             f"CPU Usage: [bold cyan]{dict['cpu']['percent']}[/]%",
             f"CPU Temperature: [bold cyan]{dict['cpu']['temp']}[/]°C",
             "",
-            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)"
+            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
         if RAM_temp_line:
             text.append(RAM_temp_line)
@@ -70,16 +65,13 @@ def interfaceload(dict):
 
         return Group(*text)
 
-
-
-
     # If only NVIDIA GPU
     elif is_nvidia != ["0", "0", "0", "0"]:
         text = [
             f"CPU Usage: [bold cyan]{dict['cpu']['percent']}[/]%",
             f"CPU Temperature: [bold cyan]{dict['cpu']['temp']}[/]°C",
             "",
-            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)"
+            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
         if RAM_temp_line:
             text.append(RAM_temp_line)
@@ -93,15 +85,12 @@ def interfaceload(dict):
 
         return Group(*text)
 
-
-
-
     else:
         text = [
             f"CPU Usage: [bold cyan]{dict['cpu']['percent']}[/]%",
             f"CPU Temperature: [bold cyan]{dict['cpu']['temp']}[/]°C",
             "",
-            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)"
+            f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
         if RAM_temp_line:
             text.append(RAM_temp_line)
