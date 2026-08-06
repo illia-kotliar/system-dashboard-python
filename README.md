@@ -26,13 +26,21 @@ The dashboard displays:
 - Possible bugs — the dashboard was built by a single person and hasn't undergone wide-scale testing
 
 ## Screenshots
+
 Dashboard with NVIDIA GPU:
+
 ![Dashboard with NVIDIA GPU](preview_screenshots/dashboard_GPU.png)
+
 Dashboard with Intel iGPU:
+
 ![Dashboard with Intel iGPU](preview_screenshots/dashboard_IGPU.png)
+
 Dashboard with NVIDIA GPU + Intel iGPU:
+
 ![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/dashboard_GPU_IGPU.png)
+
 Dashboard if NVIDIA GPU and Intel iGPU are not found by the program:
+
 ![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/dashboard_without_GPU_and_IGPU.png)
 
 ## Running
