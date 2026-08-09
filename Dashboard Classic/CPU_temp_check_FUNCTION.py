@@ -28,7 +28,7 @@ def cpuinfo():
         return [psutil.cpu_percent(interval=None, percpu=False), "N/A"]
     current_sensor = psutil.sensors_temperatures()
     cpu_info = [
-        psutil.cpu_percent(interval=None, percpu=False),
-        current_sensor[Done][0].current,
+        round(psutil.cpu_percent(interval=None, percpu=False), 1),
+        round(current_sensor[Done][0].current, 1)
     ]
     return cpu_info

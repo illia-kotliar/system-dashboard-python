@@ -1,7 +1,6 @@
-from rich.console import Group
-
 from GPU_NVIDIA_checker_FUNCTION import nvidiasmicheck
 from IGPU_intel_finder_FUNCTION import inteligpufind
+from rich.console import Group
 
 
 def interfaceload(dict):
@@ -16,6 +15,11 @@ def interfaceload(dict):
         RAM_temp_line = (
             f"Memory temperature: [bold cyan]{dict['memory']['temp']['1']}°C"
         )
+
+
+
+
+
 
     # If NVIDIA and Intel GPUs are found
     if (
@@ -54,8 +58,10 @@ def interfaceload(dict):
             "",
             f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
+
         if RAM_temp_line:
             text.append(RAM_temp_line)
+
         text += [
             "",
             f"IGpu:[bold cyan]{dict['igpu']['name']}[/]",
@@ -73,8 +79,10 @@ def interfaceload(dict):
             "",
             f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
+
         if RAM_temp_line:
             text.append(RAM_temp_line)
+
         text += [
             "",
             f"Gpu:[bold cyan]{dict['gpu']['name']}[/]",
@@ -92,6 +100,8 @@ def interfaceload(dict):
             "",
             f"Memory: [bold cyan]{dict['memory']['percent']}[/]% (used: [bold cyan]{dict['memory']['used']}[/]Gb [bold white]/[/] total: [bold cyan]{dict['memory']['total']}[/]Gb)",
         ]
+
         if RAM_temp_line:
             text.append(RAM_temp_line)
+
         return Group(*text)

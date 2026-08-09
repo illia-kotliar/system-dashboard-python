@@ -1,5 +1,4 @@
 import psutil
-
 from CPU_temp_check_FUNCTION import cpuinfo
 from GPU_NVIDIA_checker_FUNCTION import nvidiasmicheck
 
@@ -28,8 +27,8 @@ def systemstats():
     if RAMtempsensor:
         ram_temp_sensor = psutil.sensors_temperatures()[RAMtempsensor]
         ram_temp_line = {
-            "1": ram_temp_sensor[0].current,
-            "2": ram_temp_sensor[1].current,
+            "1": round(ram_temp_sensor[0].current, 1),
+            "2": round(ram_temp_sensor[1].current, 1),
         }
     else:
         ram_temp_line = {"1": "N/A", "2": "N/A"}

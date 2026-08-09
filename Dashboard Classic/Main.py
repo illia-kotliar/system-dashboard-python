@@ -1,11 +1,10 @@
 import sys
 import time
 
-from rich.console import Console
-from rich.live import Live
-
 from Interface import interfaceload
 from Nested_Dicts import systemstats
+from rich.console import Console
+from rich.live import Live
 
 console = Console(highlight=False)
 

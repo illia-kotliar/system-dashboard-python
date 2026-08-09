@@ -27,21 +27,41 @@ The dashboard displays:
 
 ## Screenshots
 
+**Dashborad Classic preview in terminal:**
+
 Dashboard with NVIDIA GPU:
 
-![Dashboard with NVIDIA GPU](preview_screenshots/dashboard_GPU.png)
+![Dashboard with NVIDIA GPU](preview_screenshots/DashboradClassic/dashboard_GPU.png)
 
 Dashboard with Intel iGPU:
 
-![Dashboard with Intel iGPU](preview_screenshots/dashboard_IGPU.png)
+![Dashboard with Intel iGPU](preview_screenshots/DashboradClassic/dashboard_IGPU.png)
 
 Dashboard with NVIDIA GPU + Intel iGPU:
 
-![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/dashboard_GPU_IGPU.png)
+![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboradClassic/dashboard_GPU_IGPU.png)
 
 Dashboard if NVIDIA GPU and Intel iGPU are not found by the program:
 
-![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/dashboard_without_GPU_and_IGPU.png)
+![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/DashboradClassic/dashboard_without_GPU_and_IGPU.png)
+
+**Dashborad with Rich Panels preview in terminal:**
+
+Dashboard with NVIDIA GPU:
+
+![Dashboard with NVIDIA GPU](preview_screenshots/DashboardPanels/dashboard_GPU_Panels.png)
+
+Dashboard with Intel iGPU:
+
+![Dashboard with Intel iGPU](preview_screenshots/DashboardPanels/dashboard_IGPU_Panels.png)
+
+Dashboard with NVIDIA GPU + Intel iGPU:
+
+![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboardPanels/dashboard_GPU_IGPU_Panels.png)
+
+Dashboard if NVIDIA GPU and Intel iGPU are not found by the program:
+
+![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/DashboardPanels/dashboard_without_GPU_and_IGPU_Panels.png)
 
 ## Running
 
