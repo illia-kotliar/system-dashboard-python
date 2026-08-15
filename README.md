@@ -1,16 +1,16 @@
-# System Dashboard
+# System Monitor Widget
 
-A stylish, minimalist TUI dashboard for monitoring your PC's system components in real time.
+A stylish, minimalist TUI widget for monitoring your PC's system components in real time.
 
 **Built exclusively for Linux.**
 
 ## Features
 
-The dashboard displays:
+The widget displays:
 
 - **CPU status** — load, temperature
 - **RAM status** — usage percentage, used space (GB), total capacity
-- **GPUʼ status** — discrete NVIDIA and integrated Intel graphics, shown together or separately depending on available hardware (load, temperature, used VRAM, total VRAM)
+- **GPU status** — discrete NVIDIA and integrated Intel graphics, shown together or separately depending on available hardware (load, temperature, used VRAM, total VRAM)
 
 ## Supported hardware
 
@@ -23,54 +23,57 @@ The dashboard displays:
 ## Known limitations
 
 - No support for AMD GPUs (no hardware available for testing)
-- Possible bugs — the dashboard was built by a single person and hasn't undergone wide-scale testing
+- Possible bugs — the widget was built by a single person and hasn't undergone wide-scale testing
 
 ## Screenshots
 
-**Dashborad Classic preview in terminal:**
+**Usage example in end_4 dotfiles:**
 
-Dashboard with NVIDIA GPU:
+![Widget with NVIDIA GPU](preview_screenshots/in_use/using.png)
 
-![Dashboard with NVIDIA GPU](preview_screenshots/DashboradClassic/dashboard_GPU.png)
+**Classic style preview in terminal:**
 
-Dashboard with Intel iGPU:
+Widget with NVIDIA GPU:
 
-![Dashboard with Intel iGPU](preview_screenshots/DashboradClassic/dashboard_IGPU.png)
+![Widget with NVIDIA GPU](preview_screenshots/DashboradClassic/dashboard_GPU.png)
 
-Dashboard with NVIDIA GPU + Intel iGPU:
+Widget with Intel iGPU:
 
-![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboradClassic/dashboard_GPU_IGPU.png)
+![Widget with Intel iGPU](preview_screenshots/DashboradClassic/dashboard_IGPU.png)
 
-Dashboard if NVIDIA GPU and Intel iGPU are not found by the program:
+Widget with NVIDIA GPU + Intel iGPU:
 
-![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/DashboradClassic/dashboard_without_GPU_and_IGPU.png)
+![Widget with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboradClassic/dashboard_GPU_IGPU.png)
 
-**Dashborad with Rich Panels preview in terminal:**
+Widget if NVIDIA GPU and Intel iGPU are not found:
 
-Dashboard with NVIDIA GPU:
+![Widget if NVIDIA GPU and Intel iGPU are not found](preview_screenshots/DashboradClassic/dashboard_without_GPU_and_IGPU.png)
 
-![Dashboard with NVIDIA GPU](preview_screenshots/DashboardPanels/dashboard_GPU_Panels.png)
+**Rich Panels style preview in terminal:**
 
-Dashboard with Intel iGPU:
+Widget with NVIDIA GPU:
 
-![Dashboard with Intel iGPU](preview_screenshots/DashboardPanels/dashboard_IGPU_Panels.png)
+![Widget with NVIDIA GPU](preview_screenshots/DashboardPanels/dashboard_GPU_Panels.png)
 
-Dashboard with NVIDIA GPU + Intel iGPU:
+Widget with Intel iGPU:
 
-![Dashboard with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboardPanels/dashboard_GPU_IGPU_Panels.png)
+![Widget with Intel iGPU](preview_screenshots/DashboardPanels/dashboard_IGPU_Panels.png)
 
-Dashboard if NVIDIA GPU and Intel iGPU are not found by the program:
+Widget with NVIDIA GPU + Intel iGPU:
 
-![Dashboard if NVIDIA GPU and Intel iGPU are not found by the program](preview_screenshots/DashboardPanels/dashboard_without_GPU_and_IGPU_Panels.png)
+![Widget with NVIDIA GPU and Intel iGPU](preview_screenshots/DashboardPanels/dashboard_GPU_IGPU_Panels.png)
+
+Widget if NVIDIA GPU and Intel iGPU are not found:
+
+![Widget if NVIDIA GPU and Intel iGPU are not found](preview_screenshots/DashboardPanels/dashboard_without_GPU_and_IGPU_Panels.png)
 
 ## Running
 
-1. Open a terminal in the dashboard's project folder
+1. Open a terminal in the widget's project folder
 2. Run:
 
-\`\`\`bash
-python3 Main.py
-\`\`\`
+
+       python3 Main.py
 
 ## Requirements
 
